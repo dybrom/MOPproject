@@ -50,3 +50,9 @@ html {
 textarea {
   resize:none;
 }
+
+
+.tweets {
+  height: 600px;
+
+}
