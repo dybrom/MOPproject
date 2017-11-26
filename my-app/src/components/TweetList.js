@@ -1,45 +1,33 @@
 import React, {   Component} from 'react';
 import Tweet from './Tweet';
-
+//import TodoStore from '../stores/TodoStore';
 //Definicija tweetList
 
 export default class TweetList extends Component {
-	constructor() {
-		super();
-		this.state = {
-				
-				tweets : [
-			{
-				id: 1111111111,
-				text: "prvi todo",
-				complete: false
-			},
-			{
-				id: 22222222,
-				text: "drugi todo",
-				complete: false
-			},
-		],
-		};
-	}
-
  render() {
  		
- 	const {tweets} = this.state;
- 	var {counter} = this.props;
+ 	const {tweets} = this.props;
+ 	
+
+
+ tweets.sort(function(a,b){
+  // Turn your strings into dates, and then subtract them
+  // to get a value that is either negative, positive, or zero.
+  return new Date(b.created_at) - new Date(a.created_at);
+});
+
  	const nestoispisat = tweets.map((bla) => {
 
- 		counter+=1;
- 		console.log(bla.text);
- 		console.log(counter);
  		
- 		return <Tweet key={bla.id} {...bla} />;
+ 		
+ 		
+ 		return <Tweet key={bla.id} {...bla} username={this.props.username} avatarUrl={this.props.avatarUrl} created_at={bla.created_at}/>;
 
  	})
     return (
-      <div className="App">
+      <div className="Appa">
       	
-      	<ul>{nestoispisat} </ul>
+      	<div> {nestoispisat} </div>
       </div>
     );
   }

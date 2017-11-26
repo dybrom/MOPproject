@@ -5,7 +5,7 @@ import React, {   Component} from 'react';
 
 export default class Profil extends Component {
   render() {
-const {firstName, lastName, username, avatarUrl, counter} = this.props;
+const {firstName, lastName, username, avatarUrl, tweetsCount} = this.props;
 
     return (
       <div className="row">
@@ -16,7 +16,7 @@ const {firstName, lastName, username, avatarUrl, counter} = this.props;
 
       <h3>{firstName + ' ' + lastName}</h3>
       <h3>{'@' + username}</h3>
-      <h3>{'Tweets: '  + counter}</h3>
+      <h3>{'Tweets: '  + tweetsCount}</h3>
       </div>
 
       </div>

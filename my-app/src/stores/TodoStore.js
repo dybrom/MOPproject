@@ -16,11 +16,11 @@ class TodoStore extends EventEmitter {
 			},
 		];
 	}
-
-	getALl() {
+ getALl() {
 		return this.tweets;
 	}
 }
 const todoStore = new TodoStore;
 
-export default todoStore;*/
+export default todoStore;
+*/
