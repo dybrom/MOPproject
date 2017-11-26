@@ -14,11 +14,9 @@ export default class TweetInput extends Component {
   render() {
     return (
       <div className="dodavanjeTweeta">
-      <form >
-        
+        <form >
           <textarea onKeyPress={(e) => this.onPressEnter(e)} ref="textarea" cols="40" id="tekst" rows="3" placeholder="blabla" className="form-control" ></textarea>
-        
-      </form>
+        </form>
       </div>
       );
   }

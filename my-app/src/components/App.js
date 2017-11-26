@@ -1,15 +1,15 @@
 import React, {   Component} from 'react';
 import '../App.css';
-import Profil from './profil';
+import Profile from './profile';
 import TweetList from './TweetList';
 import TweetInput from './TweetInput';
 //import TodoStore from '../stores/TodoStore';
-import axios from 'axios';
-import moment from 'moment';
+//import axios from 'axios';
+//import moment from 'moment';
 
 //App definicija komponente
 
-class App extends Component {
+export default class App extends Component {
 constructor() {
     super();
     
@@ -24,14 +24,14 @@ constructor() {
         
         tweets : [
       {
-        id: 1111111111,
+        id: 1,
         created_at:"2017-10-26T13:27:14.664Z", 
         // date.toISOString()
 
         text: "prvi tweet"
       },
       {
-        id: 22222222,
+        id: 2,
         created_at:"2017-11-26T13:27:14.664Z", 
         text: "drugi tweet"
       },
@@ -67,14 +67,14 @@ constructor() {
        //     })
        //  })
 
-
+    
       this.setState({
-        tweets: this.state.tweets.concat([{id: 2132121, text: val, created_at: (new Date()).toISOString()}])
+        tweets: this.state.tweets.concat([{id: this.state.tweets.length, text: val, created_at: (new Date()).toISOString()}])
       })
     }
 
     render() {
-      console.log(moment(this.state.tweets[0].created_at).fromNow());
+      
       let tweetsCount = this.state.tweets.length;
     
 
@@ -86,7 +86,7 @@ constructor() {
 
               <div className = "col-lg-4">
                 <div className = "profilbox">
-                  <Profil tweetsCount={tweetsCount} username={this.state.username} lastName={this.state.lastName} avatarUrl={this.state.avatarUrl} firstName={this.state.firstName} counter= {this.state.counter}/>
+                  <Profile tweetsCount={tweetsCount} username={this.state.username} lastName={this.state.lastName} avatarUrl={this.state.avatarUrl} firstName={this.state.firstName} counter= {this.state.counter}/>
                 </div>
               </div>
            
@@ -108,4 +108,3 @@ constructor() {
     }
 }
 
-export default App;

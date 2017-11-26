@@ -16,18 +16,18 @@ export default class TweetList extends Component {
   return new Date(b.created_at) - new Date(a.created_at);
 });
 
- 	const nestoispisat = tweets.map((bla) => {
+ 	const printTweets = tweets.map((tweet) => {
 
  		
  		
  		
- 		return <Tweet key={bla.id} {...bla} username={this.props.username} avatarUrl={this.props.avatarUrl} created_at={bla.created_at}/>;
+ 		return <Tweet key={tweet.id} {...tweet} username={this.props.username} avatarUrl={this.props.avatarUrl} />;
 
  	})
     return (
       <div className="Appa">
       	
-      	<div> {nestoispisat} </div>
+      	<div> {printTweets} </div>
       </div>
     );
   }
