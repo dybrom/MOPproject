@@ -3,9 +3,7 @@ import '../App.css';
 import Profile from './profile';
 import TweetList from './TweetList';
 import TweetInput from './TweetInput';
-//import TodoStore from '../stores/TodoStore';
-//import axios from 'axios';
-//import moment from 'moment';
+
 
 //App definicija komponente
 
@@ -26,7 +24,7 @@ constructor() {
       {
         id: 1,
         created_at:"2017-10-26T13:27:14.664Z", 
-        // date.toISOString()
+
 
         text: "prvi tweet"
       },
@@ -42,34 +40,13 @@ constructor() {
     };
   } 
 
-  compomnenDidMount() {
-    // axios
-    // .get('/tweets')
-    // .then((tweets) => {
-    //     this.setState({
-    //       tweets: tweets
-    //     })
-    // })
 
-
-    // moment("10.10.2012").fromNow();
-  }
 
 
     handleSubmit(val) {
-
-       //  axios
-       //  .post('/tweets',
-       //    {tweet: {text: 'sadsadad'}})
-       // .then((tweet) => {
-       //      this.setState({
-       //       tweets: this.state.tweets.concat([tweet])
-       //     })
-       //  })
-
-    
+      
       this.setState({
-        tweets: this.state.tweets.concat([{id: this.state.tweets.length, text: val, created_at: (new Date()).toISOString()}])
+        tweets: this.state.tweets.concat([{id: this.state.tweets.length+1, text: val, created_at: (new Date()).toISOString()}])
       })
     }
 

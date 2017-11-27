@@ -1,6 +1,6 @@
 import React, {   Component} from 'react';
 import Tweet from './Tweet';
-//import TodoStore from '../stores/TodoStore';
+
 //Definicija tweetList
 
 export default class TweetList extends Component {
@@ -18,9 +18,6 @@ export default class TweetList extends Component {
 
  	const printTweets = tweets.map((tweet) => {
 
- 		
- 		
- 		
  		return <Tweet key={tweet.id} {...tweet} username={this.props.username} avatarUrl={this.props.avatarUrl} />;
 
  	})

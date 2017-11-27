@@ -1,5 +1,4 @@
 import React  from 'react';
-//import TodoStore from '../stores/TodoStore';
 import moment from 'moment';
 
 
