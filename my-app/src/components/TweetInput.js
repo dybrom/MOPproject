@@ -13,11 +13,12 @@ export default class TweetInput extends Component {
 	}
   render() {
     return (
-      <div className="dodavanjeTweeta">
+      <div className="addingTweet">
         <form >
-          <textarea onKeyPress={(e) => this.onPressEnter(e)} ref="textarea" cols="40" id="tekst" rows="3" placeholder="blabla" className="form-control" ></textarea>
+          <textarea onKeyPress={(e) => this.onPressEnter(e)} ref="textarea" cols="40" 
+          rows="3" placeholder="Please enter your tweet and press Enter " className="form-control" ></textarea>
         </form>
       </div>
-      );
+    );
   }
 }
